@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+<body style="background-color:tan;">
 <head>
     <meta charset="utf-8">
 
@@ -18,16 +19,16 @@
 <body>
 
 
-<h1><div style="text-align:center">
+<h2><div style="text-align:center">
     <?php
 
     //this how to print some data;
     echo $data['site_name'];
 
-    ?> </h1>
+    ?> </h2>
 
-<h1><div style="text-align:center"><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
-<h1><div style="text-align:center"><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
+<h2><div style="text-align:center"><a href="index.php?page=accounts&action=all">Show All Accounts</a></h2>
+<h2><div style="text-align:center"><a href="index.php?page=tasks&action=all">Show All Tasks</a></h2>
 
 <form action="index.php?page=accounts&action=login" method="POST">
 
@@ -43,7 +44,7 @@
 
 
 </form>
-<h1><div style="text-align:center"><a href="index.php?page=accounts&action=register">Register</a></h1>
+<h2><div style="text-align:center"><a href="index.php?page=accounts&action=register">Register</a></h2>
 
 
 <script src="js/scripts.js"></script>
