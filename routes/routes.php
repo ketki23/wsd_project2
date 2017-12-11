@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kwilliams
- * Date: 11/27/17
- * Time: 5:25 PM
- */
 
 class routes
 {
 
-    public static function getRoutes()
+public static function getRoutes()
     {
         //bellow adds routes to your program, routes match the URL and request method with the controller and method.
         //You need to follow this pattern to add new URLS
@@ -32,7 +26,6 @@ class routes
         $routes[] = $route;
 
         //this is the index.php route for POST
-
         //This is an examole of the post for index
         $route = new route();
         $route->http_method = 'POST';
@@ -41,8 +34,7 @@ class routes
         $route->controller = 'homepageController';
         $route->method = 'create';
         $routes[] = $route;
-
-        //This is an examole of the post for tasks to show a task
+        //This is an example of the post for tasks to show a task
         //GET METHOD index.php?page=tasks&action=show
         $route = new route();
         $route->http_method = 'GET';
@@ -51,11 +43,9 @@ class routes
         $route->controller = 'tasksController';
         $route->method = 'show';
         $routes[] = $route;
-
-        //This is an examole of the post for tasks to list tasks.  See the action matches the method name.
+        //This is an example of the post for tasks to list tasks.  See the action matches the method name.
         //you need to add routes for create, edit, and delete
         //GET METHOD index.php?page=tasks&action=all
-
         $route = new route();
         $route->http_method = 'GET';
         $route->action = 'all';
@@ -148,9 +138,10 @@ class routes
 
 
         return $routes;
-    }
+}
 
-    public static function create($http_method,$action,$page,$controller,$method) {
+public static function create($http_method,$action,$page,$controller,$method) 
+    {
         $route = new route();
         $route->http_method = $http_method;
         $route->action = $action;
