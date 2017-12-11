@@ -33,10 +33,10 @@
 
     <div class="container"><div style="text-align:center">
         <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="email" required>
+        <input type="text" placeholder="Enter Username" name="email" required><br><br>
 
         <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <input type="password" placeholder="Enter Password" name="password" required><br><br>
 
         <button type="submit">Login</button>
     </div>
