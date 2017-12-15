@@ -64,7 +64,7 @@
   </div>
   </div>
   </nav>
-  <h3><div style="text-align:center">Enter username and password to login</h3>
+  <h3><div style="text-align:center">Enter username and password to login</h3><br><br>
   <div style="text-align:center"><div class="container-fluid">    
   <div style="text-align:center"><div class="row content">
   <div style="text-align:center">
@@ -74,7 +74,10 @@
   <input type="text" placeholder="Enter Username" name="email" required><br><br>
   <label><b>Password</b></label>
   <input type="password" placeholder="Enter Password" name="password" required><br><br>
-  <button type="submit">Login</button>
+  <button type="submit">Login</button><br><br>
+  New User?<br>
+  click on the link below to register
+
   </div>
   </form>
   </div>
