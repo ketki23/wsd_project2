@@ -42,6 +42,32 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  <div class="navbar-header">
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>                        
+  </button>
+  <a class="navbar-brand" href="#">Task Application</a>
+  </div>
+  <div class="collapse navbar-collapse" id="Navigationbar">
+  <ul class="nav navbar-nav">
+  <li class="active"><a href="index.php?page">Home</a></li>
+  <li><a href="index.php?page=accounts&action=all">All Accounts</a></li>
+  <li><a href="index.php?page=tasks&action=all">Todo Tasks</a></li>
+  <li><a href="index.php?page=tasks&action=create">Add task</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+  </ul>
+  </div>
+  </div>
+  </nav>
+  <h3><div style="text-align:center">Enter username and password to login</h3>
+  <div style="text-align:center"><div class="container-fluid">    
+  <div style="text-align:center"><div class="row content">
+  <div style="text-align:center">
 
 
 
