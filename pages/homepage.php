@@ -1,7 +1,7 @@
 <!doctype html>
 
 <html lang="en">
-<body style="background-color:tan;">
+<body style="background-color:Snow;">
 <head>
 
   <title>Task Application</title>
