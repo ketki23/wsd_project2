@@ -68,6 +68,21 @@
   <div style="text-align:center"><div class="container-fluid">    
   <div style="text-align:center"><div class="row content">
   <div style="text-align:center">
+  <form action="index.php?page=accounts&action=login" method="POST">
+  <div class="container">
+  <label><b>Username</b></label>
+  <input type="text" placeholder="Enter Username" name="email" required><br><br>
+  <label><b>Password</b></label>
+  <input type="password" placeholder="Enter Password" name="password" required><br><br>
+  <button type="submit">Login</button>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+<footer class="container-fluid text-center">
+</footer>
 
 
 
