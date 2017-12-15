@@ -76,7 +76,8 @@
   <input type="password" placeholder="Enter Password" name="password" required><br><br>
   <button type="submit">Login</button><br><br>
   New User?<br>
-  click on the link below to register
+  click on the link below to register<br><br>
+  <a href="index.php?page=accounts&action=register">Register</a>
 
   </div>
   </form>
