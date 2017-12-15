@@ -2,33 +2,45 @@
 
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-
-    <title>The HTML5 Herald</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
-
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
+    <title>Tasks</title>
+  <m eta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    
+    .navbar  /* Remove the navbar's default margin-bottom and rounded borders */ 
+    {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    .row.content {height: 515px} /* Set height of the grid  */
+     
+    .sidenav 
+    {
+      padding-top: 40px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    
+    }
+       
+    }
+    </style>
 </head>
 
 <body>
-
-<h1>Email: <?php echo $data->email; ?></h1>
-<h1>First Name: <?php echo $data->fname; ?></h1>
-<h1>Last Name: <?php echo $data->lname; ?></h1>
-
-
-<?php
-//this is how you print something  $data contains the record that was selected on the table.
-
-print_r($data);
+<div style="text-align:center">
+<h3>Account details for the user:<?php echo $data->fname; ?>&nbsp<?php echo $data->lname; ?></h3> 
+Email: <?php echo $data->email; ?><br>
+First Name: <?php echo $data->fname; ?><br>
+Last Name: <?php echo $data->lname; ?><br>
 
 
-?>
+
 
 <form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
 
