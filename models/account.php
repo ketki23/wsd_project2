@@ -50,7 +50,7 @@ final class account extends \database\model
     }
 
 
-    public function validate()
+    /*public function validate()
     {
         $valid = TRUE;
         echo 'myemail: ' . $this->email;
@@ -62,7 +62,7 @@ final class account extends \database\model
 
         return $valid;
 
-    }
+    }*/
 
 
 
