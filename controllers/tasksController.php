@@ -15,7 +15,7 @@ class tasksController extends http\controller
     public static function show()
     {
         $todo = todos::findOne($_REQUEST['id']);
-        self::getTemplate('todo', $todo);
+        self::getTemplate('todo_edit', $todo);
     }
 
       public static function newTodoform()
@@ -87,13 +87,15 @@ class tasksController extends http\controller
 
     }
 
-    public static function save() {
-        session_start();
+    public static function save() 
+    {
+        print_r($_POST);
+       /* session_start();
         $task = new todo();
 
         $task->body = $_POST['body'];
         $task->ownerid = $_SESSION['userID'];
-        $task->save();
+        $task->save();*/
 
     }
 
