@@ -33,7 +33,7 @@
 </head>
 
 <body>
-	 <nav class="navbar navbar-inverse">
+   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
   <div class="navbar-header">
   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -65,6 +65,7 @@
   </div>
   </div>
   <h2><div style="text-align:center">List of Todo task</h2>
+    <div style="text-align:center"><a href="index.php?page=tasks&action=create">Add task</a>
   
 
 
