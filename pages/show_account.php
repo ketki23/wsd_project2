@@ -64,7 +64,7 @@
   </div>
   </div>
   </div>
-<div style="text-align:center">
+
 <h3>Account details for the user:<?php echo $data->fname; ?>&nbsp<?php echo $data->lname; ?></h3> 
 Email: <?php echo $data->email; ?><br>
 First Name: <?php echo $data->fname; ?><br>
@@ -75,13 +75,37 @@ Last Name: <?php echo $data->lname; ?><br>
 
 <form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
 
-    First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>"><br>
+  <div class="form-group">
+      <label for="fname">First name:</label>
+      <input type="text" class="form-control" id="fname" placeholder="Enter First name" name="fname"  value="<?php echo $data->fname; ?>">
+    </div>
 
-    Last name: <input type="text" name="lname" value="<?php echo $data->lname; ?>"><br>
-    Email: <input type="text" name="email" value="<?php echo $data->email; ?>"><br>
-    Phone: <input type="text" name="phone" value="<?php echo $data->phone; ?>"><br>
-    Birthday: <input type="text" name="birthday" value="<?php echo $data->birthday; ?>"><br>
-    Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>"><br>
+     <div class="form-group">
+      <label for="lname">Last name:</label>
+      <input type="text" class="form-control" id="lname" placeholder="Enter Last name" name="lname"  value="<?php echo $data->lname; ?>">
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="text" class="form-control" id="phone" placeholder="Enter Phone number" name="phone"  value="<?php echo $data->phone; ?>">
+    </div>
+
+    <div class="form-group">
+      <label for="birthday">Birthday:</label>
+      <input type="text" class="form-control" id="birthday" placeholder="Enter Birthday" name="birthday" value="<?php echo $data->birthday; ?>">
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <input type="text" class="form-control" id="gender" placeholder="Enter Gender" name="gender" value="<?php echo $data->gender; ?>">
+    </div>
+    <!––First name: <input type="text" name="fname" value="<?php echo $data->fname; ?>">
+
+    <!––Last name: <input type="text" name="lname" value="<?php echo $data->lname; ?>">
+    <!––Email: <input type="text" name="email" value="<?php echo $data->email; ?>">
+    <!––Phone: <input type="text" name="phone" value="<?php echo $data->phone; ?>">
+    <!––Birthday: <input type="text" name="birthday" value="<?php echo $data->birthday; ?>">
+    <!––Gender: <input type="text" name="gender" value="<?php echo $data->gender; ?>">
     <input type="submit" value="Submit form">
 </form>
 
