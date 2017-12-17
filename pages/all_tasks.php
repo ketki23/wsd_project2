@@ -66,16 +66,19 @@
   </div>
   <h2><div style="text-align:center">List of Todo task</h2>
     <div style="text-align:center"><a href="index.php?page=tasks&action=create">Add task</a>
-  
+      
 
 
 
 <?php
 //this is how you print something
-
-print utility\htmlTable::genarateTableFromMultiArray($data);
-
-
+if ($data== False)
+      {
+        echo 'you donot have any task';
+      } else 
+      {
+        print utility\htmlTable::genarateTableFromMultiArray($data);
+      }
 ?>
 
 
