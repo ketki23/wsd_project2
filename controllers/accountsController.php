@@ -66,7 +66,7 @@ class accountsController extends http\controller
             //you may want to send the person to a
             // login page or create a session and log them in
             // and then send them to the task list page and a link to create tasks
-            header("Location: index.php?page=accounts&action=all");
+            header("Location: index.php");
 
         } else {
             //You can make a template for errors called error.php
@@ -108,6 +108,13 @@ class accountsController extends http\controller
         header("Location: index.php?page=accounts&action=all");
     }
 
+    public static function logout()
+    {
+        session_start();
+        unset($_SESSION['userID']);
+        header("Location: index.php");
+
+    }
     //this is to login, here is where you find the account and allow login or deny.
     public static function login()
     {
@@ -127,7 +134,7 @@ class accountsController extends http\controller
 
             if($user->checkPassword($_POST['password']) == TRUE) {
 
-                echo 'login';
+               // echo 'login';
 
                 session_start();
                 $_SESSION["userID"] = $user->id;
@@ -150,3 +157,4 @@ class accountsController extends http\controller
     }
 
 }
+?>
