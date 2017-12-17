@@ -14,14 +14,14 @@ class tasksController extends http\controller
     //to call the show function the url is index.php?page=task&action=show
     public static function show()
     {
-        $record = todos::findOne($_REQUEST['id']);
-        self::getTemplate('show_task', $record);
+        $todo = todos::findOne($_REQUEST['id']);
+        self::getTemplate('todo', $todo);
     }
 
       public static function newTodoform()
     {
-    
-        self::getTemplate('todo');
+        $todo = new todo();
+        self::getTemplate('todo', $todo);
     }
 
 
@@ -51,7 +51,19 @@ class tasksController extends http\controller
 
     public static function create()
     {
-        print_r($_POST);
+        $todo= new todo();
+        session_start();
+        date_default_timezone_set("Asia/Bangkok");
+        $todo-> ownerid = $_SESSION['userID']; 
+        $todo-> createddate = date("Y/m/d");
+        $todo-> isdone = $_POST['isdone'];
+        $todo-> message = $_POST['message'];
+        $todo-> owneremail= $_POST['owneremail'];
+        $todo-> duedate = $_POST['duedate'];
+        $todo-> save();
+        header("Location: index.php?page=tasks&action=all");
+
+        //print_r($_POST);
     }
 
     //this is the function to view edit record form
