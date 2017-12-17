@@ -1,96 +1,59 @@
 <!doctype html>
 
 <html lang="en">
-<body style="background-color:Snow;">
 <head>
+    <meta charset="utf-8">
 
-  <title>Task Application</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-    
-    .navbar  /* Remove the navbar's default margin-bottom and rounded borders */ 
-    {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    .row.content {height: 515px} /* Set height of the grid  */
-     
-    .sidenav 
-    {
-      padding-top: 40px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    footer /* Set black background color */
-    {
-      background-color: #555;
-      color: white;
-      padding: 20px;
-    }
-    
-    }
-       
-    }
-    </style>
-    
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-  <div class="navbar-header">
-  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>                        
-  </button>
-  <a class="navbar-brand" href="#">Task Application</a>
-  </div>
-  <div class="collapse navbar-collapse" id="Navigationbar">
-  <ul class="nav navbar-nav">
-  <li class="active"><a href="index.php?page">Home</a></li>
-  <li><a href="index.php?page=accounts&action=all">All Accounts</a></li>
-  <li><a href="index.php?page=tasks&action=all">Todo Tasks</a></li>
-  <li><a href="index.php?page=tasks&action=create">Add task</a></li>
-  <li><a href="index.php?page=accounts&action=logout">logout</a></li>
-
-  </ul>
-  <ul class="nav navbar-nav navbar-right">
-  </ul>
-  </div>
-  </div>
-  </nav>
-  <h3><div style="text-align:center">Enter username and password to login</h3><br><br>
-  <div style="text-align:center"><div class="container-fluid">    
-  <div style="text-align:center"><div class="row content">
-  <div style="text-align:center">
-  <form action="index.php?page=accounts&action=login" method="POST">
-  <div class="container">
-  <label><b>Username</b></label>
-  <input type="text" placeholder="Enter Username" name="email" required><br><br>
-  <label><b>Password</b></label>
-  <input type="password" placeholder="Enter Password" name="password" required><br><br>
-  <button type="submit">Login</button><br><br>
-  New User?<br>
-  click on the link below to register<br><br>
-  <a href="index.php?page=accounts&action=register">Register</a>
-
-  </div>
-  </form>
-  </div>
-  </div>
-  </div>
-  </div>
-<footer class="container-fluid text-center">
-</footer>
 
 
+<h1>
+    <?php
+    //this how to print some data;
+    echo $data['site_name'];
+    ?> </h1>
 
+
+<?php
+session_start();
+if(key_exists('userID', $_SESSION))
+{
+  echo '<h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>';
+  echo '<h1><a href="index.php?page=accounts&action=logout">logout</a></h1>';
+  echo '<h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>';
+
+
+}
+else 
+{
+echo '<h1><a href="index.php?page=accounts&action=register">Register</a></h1>';
+echo '<form action="index.php?page=accounts&action=login" method="POST">
+
+    <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="email" required>
+
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <button type="submit">Login</button>
+    </div>
+
+
+</form>';
+}
+?>
+<script src="js/scripts.js"></script>
 </body>
 </html>
