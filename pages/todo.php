@@ -68,7 +68,7 @@
   </div>
   </div>
 
-  <form action="/action_page.php">
+  <form form action="index.php?page=tasks&action=create" method="post">
     <div class="form-group">
       <label for="owneremail">Owner Email:</label>
       <input type="text" class="form-control" id="owneremail" placeholder="Enter Owner email" name="owneremail">
