@@ -17,81 +17,19 @@
 
 <body>
 
-<form class="form-horizontal" action='' method="POST">
-  <fieldset>
-    <div id="legend">
-      <legend class=""></legend>
-    </div>
-    <div class="control-group">
-      <label class="control-label"  for="fname">First name</label>
-      <div class="controls">
-        <input type="text" name="fname" placeholder="" class="input-xlarge">
-    </div>
-    </div><br>
-    
-    <div id="legend">
-      <legend class=""></legend>
-    </div>
-    <div class="control-group">
-      <label class="control-label"  for="lname">Last name</label>
-      <div class="controls">
-        <input type="text" name="lname" placeholder="" class="input-xlarge">
-    </div>
-    </div><br>
-    
-    <div id="legend">
-      <legend class=""></legend>
-    </div>
-    <div class="control-group">
-      <label class="control-label"  for="email">Email</label>
-      <div class="controls">
-        <input type="text" name="email" placeholder="" class="input-xlarge">
-    </div>
-    </div><br>
-    
-    <div id="legend">
-      <legend class=""></legend>
-    </div>
-    <div class="control-group">
-      <label class="control-label"  for="fname">Phone</label>
-      <div class="controls">
-        <input type="text" name="phone" placeholder="" class="input-xlarge">
-    </div>
-    </div><br>
-    
-    <div id="legend">
-      <legend class=""></legend>
-    </div>
-    <div class="control-group">
-      <label class="control-label"  for="fname">Birthday</label>
-      <div class="controls">
-        <input type="text" name="birthday" placeholder="" class="input-xlarge">
-    </div>
-    </div><br>
-    
-    <div id="legend">
-      <legend class=""></legend>
-    </div>
-    <div class="control-group">
-      <label class="control-label"  for="fname">Gender</label>
-      <div class="controls">
-        <input type="text" name="gender" placeholder="" class="input-xlarge">
-    </div>
-    </div><br>
-    
-    <div id="legend">
-      <legend class=""></legend>
-    </div>
-    <div class="control-group">
-      <label class="control-label"  for="password">Password</label>
-      <div class="controls">
-        <input type="password" name="password" placeholder="" class="input-xlarge">
-    </div>
-    </div><br>
+
+<form action="index.php?page=accounts&action=register" method="post">
+    First name: <input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    Email: <input type="text" name="email"><br>
+    Phone: <input type="text" name="phone"><br>
+    Birthday: <input type="text" name="birthday"><br>
+    Gender: <input type="text" name="gender"><br>
+    Password: <input type="password" name="password"><br>
     <input type="submit" value="Submit form">
-    
-    
-</fieldset>
 </form>
+
+
+<script src="js/scripts.js"></script>
 </body>
 </html>
