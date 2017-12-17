@@ -58,6 +58,8 @@
   <li><a href="index.php?page=accounts&action=all">All Accounts</a></li>
   <li><a href="index.php?page=tasks&action=all">Todo Tasks</a></li>
   <li><a href="index.php?page=tasks&action=create">Add task</a></li>
+  <li><a href="index.php?page=accounts&action=logout">logout</a></li>
+
   </ul>
   <ul class="nav navbar-nav navbar-right">
   </ul>
