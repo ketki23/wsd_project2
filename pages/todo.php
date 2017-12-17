@@ -2,28 +2,100 @@
 
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-
-    <title>The HTML5 Herald</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
-
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
+    <title>Tasks</title>
+  <m eta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    
+    .navbar  /* Remove the navbar's default margin-bottom and rounded borders */ 
+    {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    .row.content {height: 515px} /* Set height of the grid  */
+     
+    .sidenav 
+    {
+      padding-top: 40px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    
+    }
+       
+    }
+    </style>
 </head>
 
 <body>
 
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  <div class="navbar-header">
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>                        
+  </button>
+  <a class="navbar-brand" href="#">Task Application</a>
+  </div>
+  <div class="collapse navbar-collapse" id="Navigationbar">
+  <ul class="nav navbar-nav">
+  <li class=""><a href="index.php?page">Home</a></li>
+  <li><a href="index.php?page=accounts&action=all">All Accounts</a></li>
+  <li><a href="index.php?page=tasks&action=all">Todo Tasks</a></li>
+  <li><a href="index.php?page=tasks&action=create">Add task</a></li>
+  <li><a href="index.php?page=accounts&action=edit">Update Account</a></li>
 
-<form action="index.php?page=tasks&action=create" method="post">
-    Owner Email: <input type="text" name="owneremail" value="<?php echo $data->owneremail; ?>"><br>
-    Due Date: <input type="text" name="duedate" value="<?php echo $data->duedate; ?>"><br>
-    Message: <input type="text" name="message" value="<?php echo $data->message; ?>"><br>
-    Is Done: <input type="text" name="isdone" value="<?php echo $data->isdone; ?>"><br>
-    <input type="submit" value="Submit form">
+  <li><a href="index.php">Log Out</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+  </ul>
+  </div>
+  </div>
+  </nav>
+  
+
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="owneremail">Owner Email:</label>
+      <input type="text" class="form-control" id="owneremail" placeholder="Enter Owner email" name="owneremail">
+    </div>
+
+    <div class="form-group">
+      <label for="duedate">Due Date:</label>
+      <input type="text" class="form-control" id="duedate" placeholder="Enter Due Date" name="duedate">
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <input type="text" class="form-control" id="message" placeholder="Enter Owner email" name="message">
+    </div>
+
+    <div class="form-group">
+      <label for="isdone">Is Done:</label>
+      <input type="text" class="form-control" id="isdone" placeholder="Enter Owner email" name="isdone">
+    </div>
+
+
+ <!––<form action="index.php?page=tasks&action=create" method="post">
+   <!––  Owner Email: <input type="text" name="owneremail" value="; <?php echo $data->owneremail; ?>">
+ <!––    Due Date: <input type="text" name="duedate" value="<?php echo $data->duedate; ?>">
+  <!––   Message: <input type="text" name="message" value="<?php echo $data->message; ?>">
+  <!––   Is Done: <input type="text" name="isdone" value="<?php echo $data->isdone; ?>">
+     <input type="submit" value="Submit form">
 </form>
 
 
