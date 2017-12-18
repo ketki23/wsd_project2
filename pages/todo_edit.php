@@ -64,28 +64,32 @@
   </div>
   </div>
   </div>
+<div align="center">
+
+<h3>Hello user, enter the details below to update your task..</h3>
+</div>
 
 <form action="index.php?page=tasks&action=save&id=<?php echo $data-> id; ?>" method="post">
 
     <div class="form-group">
       <label for="owneremail">Owner Email:</label>
-      <input type="text" class="form-control" id="owneremail" placeholder="Enter Owner email" name="owneremail" value="<?php echo $data->owneremail; ?>">
+      <input type="email" class="form-control" id="owneremail" placeholder="Enter Owner email" name="owneremail" required value="<?php echo $data->owneremail; ?>">
     </div>
 
 <div class="form-group">
       <label for="duedate">Due Date:</label>
-      <input type="text" class="form-control" id="duedate" placeholder="Enter Due Date" name="duedate" value="<?php echo $data->duedate; ?>">
+      <input type="date" class="form-control" id="duedate" placeholder="Enter Due Date" name="duedate" value="<?php echo $data->duedate; ?>">
     </div>
 
 
     <div class="form-group">
       <label for="message">Message:</label>
-      <input type="text" class="form-control" id="message" placeholder="Enter Due Date" name="message" value="<?php echo $data->message; ?>">
+      <input type="text" class="form-control" id="message" placeholder="Enter Due Date" name="message" required value="<?php echo $data->message; ?>">
     </div>
 
     <div class="form-group">
       <label for="isdone">Is Done:</label>
-      <input type="text" class="form-control" id="isdone" placeholder="Enter status" name="isdone" value="<?php echo $data->isdone; ?>">
+      <input type="number" class="form-control" id="isdone" placeholder="Enter Status, if task is complete enter 1 else 0" name="isdone" min="0" max="1" required value="<?php echo $data->isdone; ?>">
     </div>
 
     <!–– Owner Email: <input type="text" name="owneremail" value="<?php echo $data->owneremail; ?>">
