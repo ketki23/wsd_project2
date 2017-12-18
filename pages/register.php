@@ -32,7 +32,7 @@
     </style>
 </head>
 
-<body>
+<body style="font-family:Times New Roman body copy;">
 
 
     <nav class="navbar navbar-inverse">
