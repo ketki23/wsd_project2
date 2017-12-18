@@ -114,7 +114,7 @@ public static function getRoutes()
 
         $route = new route();
         $route->http_method = 'POST';
-        $route->action = 'save';
+        $route->action = 'edit';
         $route->page = 'accounts';
         $route->controller = 'accountsController';
         $route->method = 'save';
@@ -163,13 +163,23 @@ public static function getRoutes()
         $routes[] = $route;
 
         $route = new route();
-        $route->http_method = 'POST';
+        $route->http_method = 'GET';
         $route->action = 'logout';
         $route->page = 'accounts';
         $route->controller = 'accountsController';
         $route->method = 'logout';
         $routes[] = $route;
 
+    $route = new route();
+    $route->http_method = 'POST';
+    $route->action = 'save';
+    $route->page = 'accounts';
+    $route->controller = 'accountsController';
+    $route->method = 'save';
+    $routes[] = $route;
+
+        
+        $routes[] = $route;
         return $routes;
 }
 
