@@ -32,7 +32,7 @@
     </style>
 </head>
 
-<body>
+<body style="font-family:Times New Roman Body Copy;">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
   <div class="navbar-header">
@@ -41,13 +41,13 @@
   <span class="icon-bar"></span>
   <span class="icon-bar"></span>                        
   </button>
-  <a class="navbar-brand" href="#">Task Application</a>
+
+  <a class="navbar-brand" href="index.php?page=tasks&action=all">Task Application</a>
   </div>
   <div class="collapse navbar-collapse" id="Navigationbar">
   <ul class="nav navbar-nav">
-      <li class="active"><a href="index.php?page">Home</a></li>
-      <li><a href="index.php?page=accounts&action=all">All Accounts</a></li>
-      <li><a href="index.php?page=tasks&action=all">Profile Page</a></li>
+      <li class=""><a href="index.php?page=tasks&action=all">Home</a></li>
+      <li><a href="index.php?page=accounts&action=show">Profile Page</a></li>
       <li><a href="index.php?page=tasks&action=create">Add task</a></li>
       <li><a href="index.php?page">Log Out</a></li>
   </ul>
