@@ -46,11 +46,11 @@
   </div>
   <div class="collapse navbar-collapse" id="Navigationbar">
   <ul class="nav navbar-nav">
-  <li class="active"><a href="index.php?page">Home</a></li>
-  <li><a href="index.php?page=accounts&action=all">All Accounts</a></li>
-  <li><a href="index.php?page=tasks&action=all">Todo Tasks</a></li>
-  <li><a href="index.php?page=tasks&action=create">Add task</a></li>
-  <li><a href="index.php?page">Log Out</a></li>
+      <li class="active"><a href="index.php?page">Home</a></li>
+      <li><a href="index.php?page=accounts&action=all">All Accounts</a></li>
+      <li><a href="index.php?page=tasks&action=all">Profile Page</a></li>
+      <li><a href="index.php?page=tasks&action=create">Add task</a></li>
+      <li><a href="index.php?page">Log Out</a></li>
   </ul>
   <ul class="nav navbar-nav navbar-right">
   </ul>
