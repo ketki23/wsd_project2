@@ -41,17 +41,16 @@
   <span class="icon-bar"></span>
   <span class="icon-bar"></span>                        
   </button>
-  <a class="navbar-brand" href="#">Task Application</a>
+  <a class="navbar-brand" href="index.php?page">Task Application</a>
   </div>
   <div class="collapse navbar-collapse" id="Navigationbar">
   <ul class="nav navbar-nav">
-  <li class=""><a href="index.php?page">Home</a></li>
-  <li><a href="index.php?page=accounts&action=all">All Accounts</a></li>
-  <li><a href="index.php?page=tasks&action=all">Todo Tasks</a></li>
-  <li><a href="index.php?page=tasks&action=create">Add task</a></li>
-  <li><a href="index.php?page=accounts&action=edit">Update Account</a></li>
+      <li class=""><a href="index.php?page=tasks&action=all">Home</a></li>
+      <li><a href="index.php?page=accounts&action=all">All Accounts</a></li>
+      <li><a href="index.php?page=accounts&action=show">Profile Page</a></li>
+      <li><a href="index.php?page=tasks&action=create">Add task</a></li>
+      <li><a href="index.php?page">Log Out</a></li>
 
-  <li><a href="index.php">Log Out</a></li>
   </ul>
   <ul class="nav navbar-nav navbar-right">
   </ul>
@@ -66,9 +65,9 @@
   </div>
   </div>
   </div>
-  <h2><div style="text-align:center">List of Todo task</h2>
-    <div style="text-align:center"><a href="index.php?page=tasks&action=create">Add task</a>
-      
+  <h2><div style="text-align:center">Welcome User</h2>
+
+
 
 
 
@@ -76,7 +75,7 @@
 //this is how you print something
 if ($data== False)
       {
-        echo 'you donot have any task';
+        echo '<h3><div align="center">You donot have any task</div></h3>';
       } else 
       {
         print utility\htmlTable::genarateTableFromMultiArray($data);
