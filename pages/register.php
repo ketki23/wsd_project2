@@ -74,14 +74,49 @@
 
 
 <form action="index.php?page=accounts&action=register" method="post">
-First name: <input type="text" name="fname"><br>
- Last name: <input type="text" name="lname"><br>
-   Email: <input type="text" name="email"><br>
-    Phone: <input type="text" name="phone"><br>
-   Birthday: <input type="text" name="birthday"><br>
-    Gender: <input type="text" name="gender"><br>
-   Password: <input type="password" name="password"><br>
-    <input type="submit" value="Submit form">
+
+    <div class="form-group">
+        <label for="fname">First Name:</label>
+        <input type="text" class="form-control" id="fname" placeholder="First Name" name="fname" required>
+    </div>
+
+    <div class="form-group">
+        <label for="lname">Last Name:</label>
+        <input type="text" class="form-control" id="lname" placeholder="Last Name" name="lname" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" id="email" placeholder="Email" name="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" class="form-control" id="phone" placeholder="phone" name="phone">
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Birthday:</label>
+        <input type="text" class="form-control" id="birthday" placeholder="birthday" name="birthday">
+    </div>
+
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <input type="text" class="form-control" id="gender" placeholder="gender" name="gender">
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="password" name="password" required>
+    </div>
+    <!––First name: <input type="text" name="fname" required>
+    <!––Last name: <input type="text" name="lname" required>
+    <!––Email: <input type="text" name="email" required>
+    <!––Phone: <input type="text" name="phone">
+    <!––Birthday: <input type="text" name="birthday">
+    <!––Gender: <input type="text" name="gender">
+    <!––Password: <input type="password" name="password" required>
+    <input type="submit" value="Register">
 </form>
 
 
