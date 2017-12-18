@@ -77,17 +77,17 @@
 
     <div class="form-group">
         <label for="fname">First Name:</label>
-        <input type="text" class="form-control" id="fname" placeholder="First Name" name="fname" required>
+        <input type="text" class="form-control" id="fname" placeholder="First Name" name="fname" minlength="1" required >
     </div>
 
     <div class="form-group">
         <label for="lname">Last Name:</label>
-        <input type="text" class="form-control" id="lname" placeholder="Last Name" name="lname" required>
+        <input type="text" class="form-control" id="lname" placeholder="Last Name" name="lname" minlength="1" required>
     </div>
 
     <div class="form-group">
         <label for="email">Email:</label>
-        <input type="text" class="form-control" id="email" placeholder="Email" name="email" required>
+        <input type="email" class="form-control" id="email" placeholder="Email" name="email" required >
     </div>
 
     <div class="form-group">
@@ -107,7 +107,7 @@
 
     <div class="form-group">
         <label for="password">Password:</label>
-        <input type="password" class="form-control" id="password" placeholder="password" name="password" required>
+        <input type="password" class="form-control" id="password" placeholder="password" name="password" minlength="6" required >
     </div>
     <!––First name: <input type="text" name="fname" required>
     <!––Last name: <input type="text" name="lname" required>
