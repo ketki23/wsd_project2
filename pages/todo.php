@@ -66,6 +66,16 @@
   </div>
     <h3 align = "center">Hello user, kindly enter the below details for creating a new task</h3>
   <form form action="index.php?page=tasks&action=create" method="post">
+      <div class="form-group">
+          <label for="Title">Title of Task:</label>
+          <input type="text" class="form-control" id="Title" placeholder="Enter task name" name="Title" required>
+      </div>
+
+      <div>
+          <label form="createddate"><b>Created Date:</b></label>
+          <input type="text" class="form-control" id="createddate"  name="createddate" value="System will auto-generate date" disabled>
+      </div><br>
+
     <div class="form-group">
       <label for="owneremail">Owner Email:</label>
       <input type="text" class="form-control" id="owneremail" placeholder="Enter Owner email" name="owneremail">
@@ -73,7 +83,7 @@
 
     <div class="form-group">
       <label for="duedate">Due Date:</label>
-      <input type="text" class="form-control" id="duedate" placeholder="Enter Due Date" name="duedate">
+      <input type="date" class="form-control" id="duedate" placeholder="Enter Due Date" name="duedate">
     </div>
 
     <div class="form-group">
@@ -83,7 +93,7 @@
 
     <div class="form-group">
       <label for="isdone">Is Done:</label>
-      <input type="text" class="form-control" id="isdone" placeholder="Enter Status" name="isdone">
+      <input type="number" class="form-control" id="isdone" placeholder="Enter Status, if task is complete enter 1 else 0 "  min="0" max="1" name="isdone">
     </div>
 
 
