@@ -32,7 +32,7 @@
     </style>
 </head>
 
-<body>
+<body style="font-family:Times New Roman Body Copy;">
 
     <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -42,17 +42,14 @@
   <span class="icon-bar"></span>
   <span class="icon-bar"></span>                        
   </button>
-  <a class="navbar-brand" href="#">Task Application</a>
+  <a class="navbar-brand" href="index.php?page=tasks&action=all">Task Application</a>
   </div>
   <div class="collapse navbar-collapse" id="Navigationbar">
   <ul class="nav navbar-nav">
-  <li class=""><a href="index.php?page">Home</a></li>
-  <li><a href="index.php?page=accounts&action=all">All Accounts</a></li>
-  <li><a href="index.php?page=tasks&action=all">Todo Tasks</a></li>
-  <li><a href="index.php?page=tasks&action=create">Add task</a></li>
-  <li><a href="index.php?page=accounts&action=edit">Update Account</a></li>
-
-  <li><a href="index.php">Log Out</a></li>
+      <li class=""><a href="index.php?page=tasks&action=all">Home</a></li>
+      <li><a href="index.php?page=accounts&action=show">Profile Page</a></li>
+      <li><a href="index.php?page=tasks&action=create">Add task</a></li>
+      <li><a href="index.php?page">Log Out</a></li>
   </ul>
   <ul class="nav navbar-nav navbar-right">
   </ul>
@@ -67,7 +64,7 @@
   </div>
   </div>
   </div>
-
+    <h3 align = "center">Hello user, kindly enter the below details for creating a new task</h3>
   <form form action="index.php?page=tasks&action=create" method="post">
     <div class="form-group">
       <label for="owneremail">Owner Email:</label>
@@ -81,12 +78,12 @@
 
     <div class="form-group">
       <label for="message">Message:</label>
-      <input type="text" class="form-control" id="message" placeholder="Enter Owner email" name="message">
+      <input type="text" class="form-control" id="message" placeholder="Enter Message" name="message">
     </div>
 
     <div class="form-group">
       <label for="isdone">Is Done:</label>
-      <input type="text" class="form-control" id="isdone" placeholder="Enter Owner email" name="isdone">
+      <input type="text" class="form-control" id="isdone" placeholder="Enter Status" name="isdone">
     </div>
 
 
