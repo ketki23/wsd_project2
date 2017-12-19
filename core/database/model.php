@@ -8,16 +8,16 @@ abstract class model
 
     public function save()
     {
-
-        if($this->validate() == FALSE) {
+        if($this->validate() == FALSE) 
+        {
             echo 'failed validation';
             exit;
         }
-
-
-        if ($this->id != '') {
+        if ($this->id != '') 
+        {
             $sql = $this->update();
-        } else {
+        } else 
+        {
             $sql = $this->insert();
             $INSERT = TRUE;
         }
@@ -25,23 +25,21 @@ abstract class model
         $statement = $db->prepare($sql);
         $array = get_object_vars($this);
 
-        if ($INSERT == TRUE) {
-
-            unset($array['id']);
-
+        if ($INSERT == TRUE) 
+        {
+        unset($array['id']);
         }
-
-        foreach (array_flip($array) as $key => $value) {
+        foreach (array_flip($array) as $key => $value)
+        {
             $statement->bindParam(":$value", $this->$value);
         }
         $statement->execute();
-        if ($INSERT == TRUE) {
+        if ($INSERT == TRUE) 
+        {
 
             $this->id = $db->lastInsertId();
 
         }
-
-
         return $this->id;
         }
 
@@ -49,7 +47,6 @@ abstract class model
 
     private function insert()
     {
-
         $modelName = static::$modelName;
         $tableName = $modelName::getTablename();
         $array = get_object_vars($this);
@@ -60,7 +57,8 @@ abstract class model
         return $sql;
     }
 
-    public function validate() {
+    public function validate()
+    {
 
         return TRUE;
     }
@@ -74,8 +72,10 @@ abstract class model
 
         $comma = " ";
         $sql = 'UPDATE ' . $tableName . ' SET ';
-        foreach ($array as $key => $value) {
-            if (!empty($value)) {
+        foreach ($array as $key => $value)
+        {
+            if (!empty($value))
+            {
                 $sql .= $comma . $key . ' = "' . $value . '"';
                 $comma = ", ";
             }
